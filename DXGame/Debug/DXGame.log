@@ -1,0 +1,51 @@
+﻿  pch.cpp
+  CAsteroidEnemy.cpp
+E:\GitHub\SkillCompetition_DirectX\DXGame\CAsteroidEnemy.cpp(31,59): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CBullet.cpp
+E:\GitHub\SkillCompetition_DirectX\DXGame\CBullet.cpp(7,12): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CDX2DApp.cpp
+  CEnemy.cpp
+  CEnemyBullet.cpp
+  CExplosionEvent.cpp
+  CFirstEnemy.cpp
+  CGame.cpp
+E:\GitHub\SkillCompetition_DirectX\DXGame\CGame.cpp(5,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\CGame.cpp(21,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CGameManager.cpp
+  CGameObject.cpp
+  CGraphics.cpp
+  CIngameScene.cpp
+E:\GitHub\SkillCompetition_DirectX\DXGame\CIngameScene.cpp(32,75): warning C4244: '인수': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\CIngameScene.cpp(34,76): warning C4244: '인수': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\CIngameScene.cpp(40,79): warning C4244: '인수': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\CIngameScene.cpp(48,64): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\CIngameScene.cpp(78,65): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  cPlayer.cpp
+E:\GitHub\SkillCompetition_DirectX\DXGame\cPlayer.cpp(33,18): warning C4244: '*=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\cPlayer.cpp(34,19): warning C4244: '*=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\cPlayer.cpp(54,27): warning C4838: 'FLOAT'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\cPlayer.cpp(54,27): warning C4244: '초기화 중': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\cPlayer.cpp(54,46): warning C4838: 'FLOAT'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\cPlayer.cpp(54,46): warning C4244: '초기화 중': 'FLOAT'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\cPlayer.cpp(55,48): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\cPlayer.cpp(60,28): warning C4244: '=': 'DWORD'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\cPlayer.cpp(90,78): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CPlayerBullet.cpp
+E:\GitHub\SkillCompetition_DirectX\DXGame\CPlayerBullet.cpp(17,64): warning C4244: '+=': 'double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\CPlayerBullet.cpp(18,64): warning C4244: '-=': 'double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CScene.cpp
+  CSceneManager.cpp
+  CScroolMap.cpp
+  CSecondEnemy.cpp
+  CSpriteManager.cpp
+  CSprite.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  DXGame.cpp
+  Input.cpp
+E:\GitHub\SkillCompetition_DirectX\DXGame\Input.cpp(251,2): warning C4060: switch문에 'case' 또는 'default' 레이블이 없습니다.
+  Utility.cpp
+E:\GitHub\SkillCompetition_DirectX\DXGame\Utility.cpp(18,10): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\Utility.cpp(58,10): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  DXGame.vcxproj -> E:\GitHub\SkillCompetition_DirectX\Debug\DXGame.exe
