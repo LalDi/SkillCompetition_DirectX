@@ -36,6 +36,9 @@ void cPlayer::Update(DWORD elapsed)
 		m_Hp = m_MaxHp;
 		m_Exp = 0;
 	}
+
+	if (m_Hp <= 0)
+		m_isLive = false;
 	CGameObject::Update(elapsed);
 }
 

@@ -58,7 +58,11 @@ void CScene::ControlAllObject(CInput* pInput)
 void CScene::RenderAllObject()
 {
 	for (auto iter : m_Objects)
-		iter->Render();
+		if (iter->m_tag != UI)
+			iter->Render();
+	for (auto iter : m_Objects)
+		if (iter->m_tag == UI)
+			iter->Render();
 }
 
 void CScene::RemoveAllObject()

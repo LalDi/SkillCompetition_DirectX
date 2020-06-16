@@ -41,11 +41,16 @@
 #include "Input.h"
 #include "CDX2DApp.h"
 #include "CSprite.h"
+
 #include "IGameObject.h"
 #include "CGameObject.h"
 #include "CScene.h"
 
+// 게임 이벤트
 #include "CExplosionEvent.h"
+#include "CLevelupEvent.h"
+
+// 게임 오브젝트
 #include "CBullet.h"
 #include "CPlayerBullet.h"
 #include "CEnemyBullet.h"
@@ -56,7 +61,16 @@
 #include "CAsteroidEnemy.h"
 #include "CScroolMap.h"
 
+// 게임 UI
+#include "CFramemask.h"
+#include "CStatusFrameUI.h"
+#include "CHpbarUI.h"
+#include "CExpbarUI.h"
+
+// 게임 씬
 #include "CIngameScene.h"
+
+// 게임 매니저
 #include "CSceneManager.h"
 #include "CSpriteManager.h"
 #include "CGameManager.h"
@@ -76,7 +90,8 @@ enum TAGS {
 	TEXTURE,
 	PLAYER,
 	ENEMY,
-	BULLET
+	BULLET,
+	UI
 };
 
 // 변수 생성

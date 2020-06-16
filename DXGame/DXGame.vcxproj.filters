@@ -1,174 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Manager">
-      <UniqueIdentifier>{a1bbd643-2930-4fa7-b816-d2445872b5bf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource File">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="System">
-      <UniqueIdentifier>{08b60438-2938-4201-bda8-ced865bbca3a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Manager\Sprite">
-      <UniqueIdentifier>{6102c0a8-275c-4fa1-88b7-8b5edfe8afae}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Scene">
-      <UniqueIdentifier>{dd2ef77f-0aab-4a37-88ea-2539041bed4d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object">
-      <UniqueIdentifier>{83aaa051-726b-4bd0-ac55-866202fd924f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MainGame">
-      <UniqueIdentifier>{b9e923e5-9204-4784-97c2-40833086fabb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Player">
-      <UniqueIdentifier>{4a22825e-1956-4d2c-85e2-298370dc65a9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Bullet">
-      <UniqueIdentifier>{802c9c28-8f29-4f17-8dfe-0581f3e010aa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Enemy">
-      <UniqueIdentifier>{ccb76a8d-05f7-4cf3-b179-e7a1c2283f67}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\ScroolMap">
-      <UniqueIdentifier>{df851a3a-a3f8-4b16-9532-b0828419b133}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Event">
-      <UniqueIdentifier>{36033645-83bb-435d-858f-c65e88a09219}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Resource.h">
-      <Filter>Resource File</Filter>
-    </ClInclude>
-    <ClInclude Include="CDX2DApp.h">
-      <Filter>System</Filter>
-    </ClInclude>
-    <ClInclude Include="CGraphics.h">
-      <Filter>System</Filter>
-    </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>System</Filter>
-    </ClInclude>
-    <ClInclude Include="framework.h" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="targetver.h" />
-    <ClInclude Include="CGameManager.h">
-      <Filter>Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="CSpriteManager.h">
-      <Filter>Manager\Sprite</Filter>
-    </ClInclude>
-    <ClInclude Include="CSprite.h">
-      <Filter>Manager\Sprite</Filter>
-    </ClInclude>
-    <ClInclude Include="CGameObject.h">
-      <Filter>Object</Filter>
-    </ClInclude>
-    <ClInclude Include="IGameObject.h">
-      <Filter>Object</Filter>
-    </ClInclude>
-    <ClInclude Include="CGame.h">
-      <Filter>MainGame</Filter>
-    </ClInclude>
-    <ClInclude Include="CScene.h">
-      <Filter>Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="CSceneManager.h">
-      <Filter>Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="CIngameScene.h">
-      <Filter>Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="cPlayer.h">
-      <Filter>Object\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="CScroolMap.h">
-      <Filter>Object\ScroolMap</Filter>
-    </ClInclude>
-    <ClInclude Include="CBullet.h">
-      <Filter>Object\Bullet</Filter>
-    </ClInclude>
-    <ClInclude Include="CEnemyBullet.h">
-      <Filter>Object\Bullet</Filter>
-    </ClInclude>
-    <ClInclude Include="CPlayerBullet.h">
-      <Filter>Object\Bullet</Filter>
-    </ClInclude>
-    <ClInclude Include="Utility.h">
-      <Filter>System</Filter>
-    </ClInclude>
-    <ClInclude Include="CEnemy.h">
-      <Filter>Object\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="CFirstEnemy.h">
-      <Filter>Object\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="CSecondEnemy.h">
-      <Filter>Object\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="CAsteroidEnemy.h">
-      <Filter>Object\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="CExplosionEvent.h">
-      <Filter>Object\Event</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="CDX2DApp.cpp">
-      <Filter>System</Filter>
-    </ClCompile>
-    <ClCompile Include="CGraphics.cpp">
-      <Filter>System</Filter>
-    </ClCompile>
-    <ClCompile Include="Input.cpp">
-      <Filter>System</Filter>
-    </ClCompile>
     <ClCompile Include="DXGame.cpp" />
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="CGameManager.cpp">
-      <Filter>Manager</Filter>
-    </ClCompile>
-    <ClCompile Include="CSpriteManager.cpp">
-      <Filter>Manager\Sprite</Filter>
-    </ClCompile>
-    <ClCompile Include="CSprite.cpp">
-      <Filter>Manager\Sprite</Filter>
+    <ClCompile Include="CGame.cpp">
+      <Filter>MainGame</Filter>
     </ClCompile>
     <ClCompile Include="CGameObject.cpp">
       <Filter>Object</Filter>
     </ClCompile>
-    <ClCompile Include="CGame.cpp">
-      <Filter>MainGame</Filter>
-    </ClCompile>
-    <ClCompile Include="CScene.cpp">
-      <Filter>Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="CSceneManager.cpp">
-      <Filter>Manager</Filter>
-    </ClCompile>
-    <ClCompile Include="CIngameScene.cpp">
-      <Filter>Scene</Filter>
+    <ClCompile Include="CScroolMap.cpp">
+      <Filter>Object\ScroolMap</Filter>
     </ClCompile>
     <ClCompile Include="cPlayer.cpp">
       <Filter>Object\Player</Filter>
     </ClCompile>
-    <ClCompile Include="CScroolMap.cpp">
-      <Filter>Object\ScroolMap</Filter>
-    </ClCompile>
-    <ClCompile Include="CBullet.cpp">
-      <Filter>Object\Bullet</Filter>
-    </ClCompile>
-    <ClCompile Include="CEnemyBullet.cpp">
-      <Filter>Object\Bullet</Filter>
-    </ClCompile>
-    <ClCompile Include="CPlayerBullet.cpp">
-      <Filter>Object\Bullet</Filter>
-    </ClCompile>
-    <ClCompile Include="Utility.cpp">
-      <Filter>System</Filter>
+    <ClCompile Include="CAsteroidEnemy.cpp">
+      <Filter>Object\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="CEnemy.cpp">
       <Filter>Object\Enemy</Filter>
@@ -179,24 +27,208 @@
     <ClCompile Include="CSecondEnemy.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
-    <ClCompile Include="CAsteroidEnemy.cpp">
-      <Filter>Object\Enemy</Filter>
+    <ClCompile Include="CEnemyBullet.cpp">
+      <Filter>Object\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="CBullet.cpp">
+      <Filter>Object\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerBullet.cpp">
+      <Filter>Object\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="CDX2DApp.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="CGraphics.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>System</Filter>
     </ClCompile>
     <ClCompile Include="CExplosionEvent.cpp">
       <Filter>Object\Event</Filter>
     </ClCompile>
+    <ClCompile Include="CGameManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="CSprite.cpp">
+      <Filter>Manager\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="CSpriteManager.cpp">
+      <Filter>Manager\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="CIngameScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CHpbarUI.cpp">
+      <Filter>Object\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="CStatusFrameUI.cpp">
+      <Filter>Object\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="CFramemask.cpp">
+      <Filter>Object\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="CExpbarUI.cpp">
+      <Filter>Object\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="CLevelupEvent.cpp">
+      <Filter>Object\Event</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="CGame.h">
+      <Filter>MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Resource File</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameObject.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="CScroolMap.h">
+      <Filter>Object\ScroolMap</Filter>
+    </ClInclude>
+    <ClInclude Include="cPlayer.h">
+      <Filter>Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CAsteroidEnemy.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnemy.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="CFirstEnemy.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="CSecondEnemy.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnemyBullet.h">
+      <Filter>Object\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="CBullet.h">
+      <Filter>Object\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerBullet.h">
+      <Filter>Object\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="IGameObject.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="CDX2DApp.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="CGraphics.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="CExplosionEvent.h">
+      <Filter>Object\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="CSprite.h">
+      <Filter>Manager\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="CSpriteManager.h">
+      <Filter>Manager\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="CIngameScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CHpbarUI.h">
+      <Filter>Object\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="CStatusFrameUI.h">
+      <Filter>Object\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="CFramemask.h">
+      <Filter>Object\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="CExpbarUI.h">
+      <Filter>Object\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="CLevelupEvent.h">
+      <Filter>Object\Event</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="DXGame.ico">
+      <Filter>Resource File</Filter>
+    </Image>
+    <Image Include="small.ico">
+      <Filter>Resource File</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="MainGame">
+      <UniqueIdentifier>{c10d14be-bac0-41a6-94ea-56379439e253}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{77bc3f3d-f389-4b69-8e3d-be560726967b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{96b90f2b-8bdf-4f11-b715-0b2bf268d788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource File">
+      <UniqueIdentifier>{ce5f625a-7d87-4266-8aa3-9530d7e35c17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{390f8cbb-1b9c-48aa-aa59-b2c00d5a8e88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{37060087-db81-45e1-8a95-36acf488a777}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Bullet">
+      <UniqueIdentifier>{0702935f-29c1-43ef-a077-c9bd618ed440}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy">
+      <UniqueIdentifier>{127bbe10-c4e8-45b3-935f-70a9392c2c24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Event">
+      <UniqueIdentifier>{fef209ff-966c-4b59-b872-51c87990107d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Player">
+      <UniqueIdentifier>{24dfa426-c5ea-4273-a201-07fe432e5096}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\ScroolMap">
+      <UniqueIdentifier>{2b0b105f-2cbd-42e0-aca3-1c6e663a88e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\UI">
+      <UniqueIdentifier>{1089e858-c4bc-4e2d-84c6-2d6e2e06e3d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Sprite">
+      <UniqueIdentifier>{8d52509e-d216-415f-a6f3-9881f9a405fa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DXGame.rc">
       <Filter>Resource File</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="small.ico">
-      <Filter>Resource File</Filter>
-    </Image>
-    <Image Include="DXGame.ico">
-      <Filter>Resource File</Filter>
-    </Image>
   </ItemGroup>
 </Project>

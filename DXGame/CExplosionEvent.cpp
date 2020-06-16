@@ -6,7 +6,7 @@ CExplosionEvent::CExplosionEvent(LPCWSTR sFileName, D2D1_POINT_2F Pos, int sprWi
 	if (IsEnemy)
 		m_Scale = { 1,1 };
 	else
-		m_Scale = { 2,2 };
+		m_Scale = { 3,3 };
 
 	m_Sprites[0] = CGameManager::GetSpriteManager()->GetSprite(L"./Images/Explosion/explosion1.png");
 	m_Sprites[1] = CGameManager::GetSpriteManager()->GetSprite(L"./Images/Explosion/explosion2.png");

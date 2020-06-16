@@ -65,10 +65,10 @@ INT		CGame::Render()
 
 	m_SceneManager->Render();
 
-	wchar_t Wstring[100];
-	swprintf(Wstring, 100, L"현재 프레임 : %d\n조작 : WASD, 마우스\n발사 : 좌클릭\n모드 변경 : 우클릭", m_fps);
+	//wchar_t Wstring[100];
+	//swprintf(Wstring, 100, L"현재 프레임 : %d\n조작 : WASD, 마우스\n발사 : 좌클릭\n모드 변경 : 우클릭", m_fps);
 	m_Gfx->GetRenderTarget()->SetTransform(D2D1::Matrix3x2F::Identity());
-	m_Gfx->DrawTextOut(Wstring, D2D1::Point2F(0, 0));
+	//m_Gfx->DrawTextOut(Wstring, D2D1::Point2F(0, 0));
 
 	m_Gfx->EndDraw();
 

@@ -5,6 +5,11 @@ void CIngameScene::Init()
 	CGameObject* ScrollTemp1;
 	CGameObject* ScrollTemp2;
 
+	CGameObject* UITemp0;
+	CGameObject* UITemp1;
+	CGameObject* UITemp2;
+	CGameObject* UITemp3;
+
 	ScrollTemp1 = new CScroolMap(L"./Images/Background.png", D2D1::Point2F(0, -1024), 1024, 1024);
 	AddObject(ScrollTemp1);
 	ScrollTemp2 = new CScroolMap(L"./Images/Background.png", D2D1::Point2F(0, 0), 1024, 1024);
@@ -12,6 +17,15 @@ void CIngameScene::Init()
 
 	Player = new cPlayer(L"./Images/Player.png", D2D1::Point2F(WinSizeX / 2, 800), 124, 135);
 	AddObject(Player);
+
+	UITemp0 = new CFramemask(L"./Images/UI/UI_FrameMask.png", D2D1::Point2F(20, 20), 814, 253);
+	AddObject(UITemp0);
+	UITemp1 = new CHpbarUI(L"./Images/UI/UI_Hp.png", D2D1::Point2F(320, 85), 426, 42, Player);
+	AddObject(UITemp1);
+	UITemp2 = new CExpbarUI(L"./Images/UI/UI_Exp.png", D2D1::Point2F(320, 145), 426, 42, Player);
+	AddObject(UITemp2);
+	UITemp3 = new CStatusFrameUI(L"./Images/UI/UI_Frame.png", D2D1::Point2F(20, 20), 814, 253);
+	AddObject(UITemp3);
 
 	m_MobDelay = 1500;
 	m_AsteroidDelay = 10000;
@@ -57,7 +71,7 @@ void CIngameScene::Update(DWORD elapsed)
 		}
 		if ((*iter)->m_tag == BULLET)
 		{
-			if (((CBullet*)(*iter))->GetBulletState())
+			if (((CBullet*)(*iter))->GetBulletState()) // 플레이어 총알
 			{
 				for (auto iter2 = m_Objects.begin(); iter2 != m_Objects.end(); iter2++)
 				{
@@ -67,17 +81,24 @@ void CIngameScene::Update(DWORD elapsed)
 						{
 							((CEnemy*)(*iter2))->MinusHp(((CBullet*)(*iter))->GetDamage());
 							if (((CEnemy*)(*iter2))->GetHp() <= 0)
+							{
+								Player->PlusExp(((CEnemy*)(*iter2))->GetGiveExp());
 								AddObject(new CExplosionEvent(L"./Images/Explosion/explosion1.png", (*iter)->GetPos(), 64, 64, true));
+								if (Player->GetExp() >= 100)
+									AddObject(new CLevelupEvent(L"./Images/LevelUp.png", D2D1::Point2F(WinSizeX / 2, WinSizeY / 2), 720, 360));
+							}
 							(*iter)->m_isLive = false;
 						}
 					}
 				}
 			}
-			else
+			else // 에너미 총알
 			{
 				if (RectCircleCrashCheck(Player->GetPos(), Player->GetRadius(), ((CBullet*)(*iter))->GetRect()))
 				{
 					Player->SetHp(Player->GetHp() - ((CBullet*)(*iter))->GetDamage());
+					if (Player->GetHp() <= 0)
+						AddObject(new CExplosionEvent(L"./Images/Explosion/explosion1.png", Player->GetPos(), 64, 64, false));
 					(*iter)->m_isLive = false;
 				}
 			}

@@ -4,6 +4,7 @@ class CSprite
 	CGraphics* m_gfx;
 	ID2D1Bitmap* m_bmp;
 
+public:
 	int m_imageWidth, m_imageHeight;
 	int m_sprWidth, m_sprHeight;
 
