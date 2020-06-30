@@ -29,6 +29,7 @@ public:
 
 	CGameObject* Fire(float Angle);
 
+	int GetLevel() { return m_Level; }
 	int GetHp() { return m_Hp; }
 	int GetMaxHp() { return m_MaxHp; }
 	void SetHp(int value) { m_Hp = value; }

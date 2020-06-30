@@ -63,9 +63,11 @@
 
 // 게임 UI
 #include "CFramemask.h"
+#include "CLevelUI.h"
 #include "CStatusFrameUI.h"
 #include "CHpbarUI.h"
 #include "CExpbarUI.h"
+
 
 // 게임 씬
 #include "CIngameScene.h"
@@ -85,6 +87,7 @@
 #define PI 3.14f
 #define ToRadian( degree )  ( (degree) * (PI / 180.0f) )
 #define ToDegree( radian )  ( (radian) * (180.0f / PI) )
+#define PlayerLevel( Level ) (100 + Level * 200)
 
 enum TAGS {
 	TEXTURE,

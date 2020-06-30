@@ -3,6 +3,7 @@ class CEnemy : public CGameObject
 {
 protected:
 	int m_Hp;
+	int m_MaxHp;
 	float m_Speed;
 	int m_Damage;
 	float m_AttackSpeed;

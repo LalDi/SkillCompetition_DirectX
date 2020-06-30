@@ -84,6 +84,9 @@
     <ClCompile Include="CLevelupEvent.cpp">
       <Filter>Object\Event</Filter>
     </ClCompile>
+    <ClCompile Include="CLevelUI.cpp">
+      <Filter>Object\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
@@ -175,6 +178,9 @@
     </ClInclude>
     <ClInclude Include="CLevelupEvent.h">
       <Filter>Object\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="CLevelUI.h">
+      <Filter>Object\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

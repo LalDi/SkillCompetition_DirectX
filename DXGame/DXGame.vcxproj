@@ -163,6 +163,7 @@
     <ClInclude Include="CGraphics.h" />
     <ClInclude Include="CHpbarUI.h" />
     <ClInclude Include="CIngameScene.h" />
+    <ClInclude Include="CLevelUI.h" />
     <ClInclude Include="CLevelupEvent.h" />
     <ClInclude Include="cPlayer.h" />
     <ClInclude Include="CPlayerBullet.h" />
@@ -197,6 +198,7 @@
     <ClCompile Include="CGraphics.cpp" />
     <ClCompile Include="CHpbarUI.cpp" />
     <ClCompile Include="CIngameScene.cpp" />
+    <ClCompile Include="CLevelUI.cpp" />
     <ClCompile Include="CLevelupEvent.cpp" />
     <ClCompile Include="cPlayer.cpp" />
     <ClCompile Include="CPlayerBullet.cpp" />

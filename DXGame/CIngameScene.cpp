@@ -2,30 +2,27 @@
 
 void CIngameScene::Init()
 {
-	CGameObject* ScrollTemp1;
-	CGameObject* ScrollTemp2;
+	CGameObject* ScrollTemp;
+	CGameObject* UITemp;
 
-	CGameObject* UITemp0;
-	CGameObject* UITemp1;
-	CGameObject* UITemp2;
-	CGameObject* UITemp3;
-
-	ScrollTemp1 = new CScroolMap(L"./Images/Background.png", D2D1::Point2F(0, -1024), 1024, 1024);
-	AddObject(ScrollTemp1);
-	ScrollTemp2 = new CScroolMap(L"./Images/Background.png", D2D1::Point2F(0, 0), 1024, 1024);
-	AddObject(ScrollTemp2);
+	ScrollTemp = new CScroolMap(L"./Images/Background.png", D2D1::Point2F(0, -1024), 1024, 1024);
+	AddObject(ScrollTemp);
+	ScrollTemp = new CScroolMap(L"./Images/Background.png", D2D1::Point2F(0, 0), 1024, 1024);
+	AddObject(ScrollTemp);
 
 	Player = new cPlayer(L"./Images/Player.png", D2D1::Point2F(WinSizeX / 2, 800), 124, 135);
 	AddObject(Player);
 
-	UITemp0 = new CFramemask(L"./Images/UI/UI_FrameMask.png", D2D1::Point2F(20, 20), 814, 253);
-	AddObject(UITemp0);
-	UITemp1 = new CHpbarUI(L"./Images/UI/UI_Hp.png", D2D1::Point2F(320, 85), 426, 42, Player);
-	AddObject(UITemp1);
-	UITemp2 = new CExpbarUI(L"./Images/UI/UI_Exp.png", D2D1::Point2F(320, 145), 426, 42, Player);
-	AddObject(UITemp2);
-	UITemp3 = new CStatusFrameUI(L"./Images/UI/UI_Frame.png", D2D1::Point2F(20, 20), 814, 253);
-	AddObject(UITemp3);
+	UITemp = new CFramemask(L"./Images/UI/UI_FrameMask.png", D2D1::Point2F(20, 20), 407, 127);
+	AddObject(UITemp);
+	UITemp = new CHpbarUI(L"./Images/UI/UI_Hp.png", D2D1::Point2F(170, 50), 213, 21, Player);
+	AddObject(UITemp);
+	UITemp = new CExpbarUI(L"./Images/UI/UI_Exp.png", D2D1::Point2F(170, 85), 213, 21, Player);
+	AddObject(UITemp);
+	UITemp = new CStatusFrameUI(L"./Images/UI/UI_Frame.png", D2D1::Point2F(20, 20), 407, 127);
+	AddObject(UITemp);
+	UITemp = new CLevelUI(L"./Images/UI/UI_LV1.png", D2D1::Point2F(70, 35), 94, 98, Player);
+	AddObject(UITemp);
 
 	m_MobDelay = 1500;
 	m_AsteroidDelay = 10000;
@@ -40,7 +37,7 @@ void CIngameScene::Update(DWORD elapsed)
 			for (int i = -2; i < 3; i++)
 				AddObject(Player->Fire(Player->GetAngle() + i * 5));
 
-	if (timeGetTime() - m_MobSpawn > m_MobDelay)
+	if (timeGetTime() - m_MobSpawn > m_MobDelay - (Player->GetLevel() - 1) * 200)
 	{
 		if (rand() % 2 == 0)
 			AddObject(new CFirstEnemy(L"./Images/Enemy1.png", D2D1::Point2F(rand() % (WinSizeX - 40), 70), 40, 55));
@@ -84,7 +81,7 @@ void CIngameScene::Update(DWORD elapsed)
 							{
 								Player->PlusExp(((CEnemy*)(*iter2))->GetGiveExp());
 								AddObject(new CExplosionEvent(L"./Images/Explosion/explosion1.png", (*iter)->GetPos(), 64, 64, true));
-								if (Player->GetExp() > 100)
+								if (Player->GetExp() > PlayerLevel(Player->GetLevel()))
 									AddObject(new CLevelupEvent(L"./Images/LevelUp.png", D2D1::Point2F(WinSizeX / 2, WinSizeY / 2), 720, 360));
 							}
 							(*iter)->m_isLive = false;

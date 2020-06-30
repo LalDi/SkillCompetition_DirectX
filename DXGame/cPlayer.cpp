@@ -28,12 +28,12 @@ void cPlayer::Update(DWORD elapsed)
 {
 	m_Delay = 1000 / m_AttackSpeed;
 
-	if (m_Exp > 100 && m_Level < 5)
+	if (m_Exp > PlayerLevel(m_Level) && m_Level < 5)
 	{
 		m_Level++;
-		m_MaxHp *= 1.2f;
-		m_Damage *= 1.2f;
-		m_AttackSpeed *= 1.2f;
+		m_MaxHp = floor((float)m_MaxHp * 1.2f + 0.5f);
+		m_Damage = floor((float)m_Damage * 1.2f + 0.5f);
+		m_AttackSpeed = floor((float)m_AttackSpeed * 1.2f + 0.5f);
 		m_Hp = m_MaxHp;
 		m_Exp = 0;
 	}
