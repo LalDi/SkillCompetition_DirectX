@@ -34,7 +34,7 @@ public:
 	void SetHp(int value) { m_Hp = value; }
 	int GetExp() { return m_Exp; }
 	void SetExp(int value) { m_Exp = value; }
-	void PlusExp(int value) { m_Exp += value; }
+	void PlusExp(int value) { if (m_Level < 5) m_Exp += value; }
 	float GetRadius() { return m_Radius; }
 	float GetAngle() { return m_Angle; }
 	bool GetIsFire() { return b_Fire; }

@@ -84,7 +84,7 @@ void CIngameScene::Update(DWORD elapsed)
 							{
 								Player->PlusExp(((CEnemy*)(*iter2))->GetGiveExp());
 								AddObject(new CExplosionEvent(L"./Images/Explosion/explosion1.png", (*iter)->GetPos(), 64, 64, true));
-								if (Player->GetExp() >= 100)
+								if (Player->GetExp() > 100)
 									AddObject(new CLevelupEvent(L"./Images/LevelUp.png", D2D1::Point2F(WinSizeX / 2, WinSizeY / 2), 720, 360));
 							}
 							(*iter)->m_isLive = false;

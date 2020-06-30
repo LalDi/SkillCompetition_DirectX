@@ -28,14 +28,17 @@ void cPlayer::Update(DWORD elapsed)
 {
 	m_Delay = 1000 / m_AttackSpeed;
 
-	if (m_Exp >= 100)
+	if (m_Exp > 100 && m_Level < 5)
 	{
+		m_Level++;
 		m_MaxHp *= 1.2f;
 		m_Damage *= 1.2f;
 		m_AttackSpeed *= 1.2f;
 		m_Hp = m_MaxHp;
 		m_Exp = 0;
 	}
+	else if (m_Level == 5)
+		m_Exp = 100;
 
 	if (m_Hp <= 0)
 		m_isLive = false;
@@ -44,13 +47,13 @@ void cPlayer::Update(DWORD elapsed)
 
 void cPlayer::Control(CInput* Input)
 {
-	if (Input->KeyPress(VK_W) && m_Pos.y >= 0)
+	if (Input->KeyPress(VK_W) && m_Pos.y >= 0) // 0x57
 		m_Pos.y -= m_Speed;
-	if (Input->KeyPress(VK_A) && m_Pos.x >= 0)
+	if (Input->KeyPress(VK_A) && m_Pos.x >= 0) // 0x41
 		m_Pos.x -= m_Speed;
-	if (Input->KeyPress(VK_S) && m_Pos.y <= WinSizeY)
+	if (Input->KeyPress(VK_S) && m_Pos.y <= WinSizeY) // 0x53
 		m_Pos.y += m_Speed;
-	if (Input->KeyPress(VK_D) && m_Pos.x <= WinSizeX)
+	if (Input->KeyPress(VK_D) && m_Pos.x <= WinSizeX) // 0x44
 		m_Pos.x += m_Speed;
 
 	POINT Mouse = Input->GetMousePos();

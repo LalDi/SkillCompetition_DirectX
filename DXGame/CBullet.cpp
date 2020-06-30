@@ -14,7 +14,13 @@ CBullet::~CBullet()
 
 void CBullet::Update(DWORD elapsed)
 {
-	CGameObject::Update(elapsed);
+	m_Rect = {
+		(m_Pos.x - m_rTiled.right / 2) * m_Scale.x,
+		(m_Pos.y - m_rTiled.right / 2) * m_Scale.y,
+		(m_Pos.x + m_rTiled.right / 2) * m_Scale.x,
+		(m_Pos.y + m_rTiled.right / 2) * m_Scale.y
+	};
+
 	if (OutMap())
 		m_isLive = false;
 }

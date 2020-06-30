@@ -4,6 +4,7 @@ CExpbarUI::CExpbarUI(LPCWSTR sFileName, D2D1_POINT_2F Pos, int sprWidth, int spr
 	:CGameObject(sFileName, Pos, sprWidth, sprHeight, UI)
 {
 	Player = player;
+	m_Scale = { 0.6f, 0.6f };
 }
 
 CExpbarUI::~CExpbarUI()
