@@ -1,6 +1,7 @@
-﻿  CFirstEnemy.cpp
-E:\GitHub\SkillCompetition_DirectX\DXGame\CFirstEnemy.cpp(24,58): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  CSecondEnemy.cpp
-E:\GitHub\SkillCompetition_DirectX\DXGame\CSecondEnemy.cpp(24,58): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  코드를 생성하고 있습니다...
+﻿  CIngameScene.cpp
+E:\GitHub\SkillCompetition_DirectX\DXGame\CIngameScene.cpp(43,75): warning C4244: '인수': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\CIngameScene.cpp(45,76): warning C4244: '인수': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\CIngameScene.cpp(51,79): warning C4244: '인수': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\CIngameScene.cpp(59,64): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\GitHub\SkillCompetition_DirectX\DXGame\CIngameScene.cpp(94,65): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   DXGame.vcxproj -> E:\GitHub\SkillCompetition_DirectX\Debug\DXGame.exe

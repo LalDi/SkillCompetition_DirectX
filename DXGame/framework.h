@@ -70,6 +70,7 @@
 
 
 // 게임 씬
+#include "CTitleScene.h"
 #include "CIngameScene.h"
 
 // 게임 매니저

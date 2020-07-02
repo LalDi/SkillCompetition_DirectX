@@ -63,29 +63,32 @@
     <ClCompile Include="CSpriteManager.cpp">
       <Filter>Manager\Sprite</Filter>
     </ClCompile>
-    <ClCompile Include="CIngameScene.cpp">
-      <Filter>Scene</Filter>
-    </ClCompile>
     <ClCompile Include="CScene.cpp">
       <Filter>Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="CHpbarUI.cpp">
-      <Filter>Object\UI</Filter>
-    </ClCompile>
-    <ClCompile Include="CStatusFrameUI.cpp">
-      <Filter>Object\UI</Filter>
-    </ClCompile>
-    <ClCompile Include="CFramemask.cpp">
-      <Filter>Object\UI</Filter>
-    </ClCompile>
-    <ClCompile Include="CExpbarUI.cpp">
-      <Filter>Object\UI</Filter>
     </ClCompile>
     <ClCompile Include="CLevelupEvent.cpp">
       <Filter>Object\Event</Filter>
     </ClCompile>
+    <ClCompile Include="CIngameScene.cpp">
+      <Filter>Scene\Ingame</Filter>
+    </ClCompile>
+    <ClCompile Include="CTitleScene.cpp">
+      <Filter>Scene\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="CExpbarUI.cpp">
+      <Filter>Object\UI\Ingame</Filter>
+    </ClCompile>
+    <ClCompile Include="CFramemask.cpp">
+      <Filter>Object\UI\Ingame</Filter>
+    </ClCompile>
+    <ClCompile Include="CHpbarUI.cpp">
+      <Filter>Object\UI\Ingame</Filter>
+    </ClCompile>
     <ClCompile Include="CLevelUI.cpp">
-      <Filter>Object\UI</Filter>
+      <Filter>Object\UI\Ingame</Filter>
+    </ClCompile>
+    <ClCompile Include="CStatusFrameUI.cpp">
+      <Filter>Object\UI\Ingame</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -158,29 +161,32 @@
     <ClInclude Include="CSpriteManager.h">
       <Filter>Manager\Sprite</Filter>
     </ClInclude>
-    <ClInclude Include="CIngameScene.h">
-      <Filter>Scene</Filter>
-    </ClInclude>
     <ClInclude Include="CScene.h">
       <Filter>Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="CHpbarUI.h">
-      <Filter>Object\UI</Filter>
-    </ClInclude>
-    <ClInclude Include="CStatusFrameUI.h">
-      <Filter>Object\UI</Filter>
-    </ClInclude>
-    <ClInclude Include="CFramemask.h">
-      <Filter>Object\UI</Filter>
-    </ClInclude>
-    <ClInclude Include="CExpbarUI.h">
-      <Filter>Object\UI</Filter>
     </ClInclude>
     <ClInclude Include="CLevelupEvent.h">
       <Filter>Object\Event</Filter>
     </ClInclude>
+    <ClInclude Include="CIngameScene.h">
+      <Filter>Scene\Ingame</Filter>
+    </ClInclude>
+    <ClInclude Include="CTitleScene.h">
+      <Filter>Scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="CExpbarUI.h">
+      <Filter>Object\UI\Ingame</Filter>
+    </ClInclude>
+    <ClInclude Include="CFramemask.h">
+      <Filter>Object\UI\Ingame</Filter>
+    </ClInclude>
+    <ClInclude Include="CHpbarUI.h">
+      <Filter>Object\UI\Ingame</Filter>
+    </ClInclude>
     <ClInclude Include="CLevelUI.h">
-      <Filter>Object\UI</Filter>
+      <Filter>Object\UI\Ingame</Filter>
+    </ClInclude>
+    <ClInclude Include="CStatusFrameUI.h">
+      <Filter>Object\UI\Ingame</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -230,6 +236,18 @@
     </Filter>
     <Filter Include="Manager\Sprite">
       <UniqueIdentifier>{8d52509e-d216-415f-a6f3-9881f9a405fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Ingame">
+      <UniqueIdentifier>{55e30477-b206-486a-8fe1-373f76fb9fed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Title">
+      <UniqueIdentifier>{d34cd90c-5d0c-4a55-8040-c07f78c49194}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\UI\Title">
+      <UniqueIdentifier>{e2630654-13b2-4d47-8d1e-6c254acb58a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\UI\Ingame">
+      <UniqueIdentifier>{7783282f-e6eb-49a7-83d5-5a7cb89ad728}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

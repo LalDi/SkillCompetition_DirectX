@@ -117,4 +117,5 @@ void CIngameScene::Render()
 
 void CIngameScene::Release()
 {
+	CScene::RemoveAllObject();
 }
