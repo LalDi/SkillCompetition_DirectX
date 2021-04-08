@@ -7,6 +7,7 @@ private:
 	time_t m_AsteroidSpawn = timeGetTime();
 	float m_MobDelay;
 	float m_AsteroidDelay;
+	bool b_isGameover = false;
 
 public:
 	virtual void Init() override;

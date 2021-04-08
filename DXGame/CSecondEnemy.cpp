@@ -15,6 +15,8 @@ CSecondEnemy::CSecondEnemy(LPCWSTR sFileName, D2D1_POINT_2F Pos, int sprWidth, i
 
 CSecondEnemy::~CSecondEnemy()
 {
+	delete(m_SpriteHP);
+	m_SpriteHP = nullptr;
 }
 
 void CSecondEnemy::Update(DWORD elapsed)

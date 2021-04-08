@@ -6,7 +6,7 @@ CDX2DApp::CDX2DApp()
 {
 	g_pDX2App = this;
 
-	m_sCls = L"DXGame";
+	m_sCls = L"Shooting Game";
 
 	m_hInst = NULL;
 	m_hWnd = NULL;

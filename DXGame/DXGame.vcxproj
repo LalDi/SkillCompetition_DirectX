@@ -160,6 +160,7 @@
     <ClInclude Include="CGame.h" />
     <ClInclude Include="CGameManager.h" />
     <ClInclude Include="CGameObject.h" />
+    <ClInclude Include="CGameoverUI.h" />
     <ClInclude Include="CGraphics.h" />
     <ClInclude Include="CHpbarUI.h" />
     <ClInclude Include="CIngameScene.h" />
@@ -196,6 +197,7 @@
     <ClCompile Include="CGame.cpp" />
     <ClCompile Include="CGameManager.cpp" />
     <ClCompile Include="CGameObject.cpp" />
+    <ClCompile Include="CGameoverUI.cpp" />
     <ClCompile Include="CGraphics.cpp" />
     <ClCompile Include="CHpbarUI.cpp" />
     <ClCompile Include="CIngameScene.cpp" />

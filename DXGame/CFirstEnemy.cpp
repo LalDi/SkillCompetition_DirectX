@@ -15,6 +15,8 @@ CFirstEnemy::CFirstEnemy(LPCWSTR sFileName, D2D1_POINT_2F Pos, int sprWidth, int
 
 CFirstEnemy::~CFirstEnemy()
 {
+	delete(m_SpriteHP);
+	m_SpriteHP = nullptr;
 }
 
 void CFirstEnemy::Update(DWORD elapsed)

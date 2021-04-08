@@ -90,6 +90,9 @@
     <ClCompile Include="CStatusFrameUI.cpp">
       <Filter>Object\UI\Ingame</Filter>
     </ClCompile>
+    <ClCompile Include="CGameoverUI.cpp">
+      <Filter>Object\UI\Ingame</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
@@ -186,6 +189,9 @@
       <Filter>Object\UI\Ingame</Filter>
     </ClInclude>
     <ClInclude Include="CStatusFrameUI.h">
+      <Filter>Object\UI\Ingame</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameoverUI.h">
       <Filter>Object\UI\Ingame</Filter>
     </ClInclude>
   </ItemGroup>

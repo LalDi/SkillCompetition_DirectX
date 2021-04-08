@@ -26,6 +26,7 @@ void CIngameScene::Init()
 
 	m_MobDelay = 1500;
 	m_AsteroidDelay = 10000;
+	b_isGameover = false;
 }
 
 void CIngameScene::Update(DWORD elapsed)
@@ -37,13 +38,16 @@ void CIngameScene::Update(DWORD elapsed)
 			for (int i = -2; i < 3; i++)
 				AddObject(Player->Fire(Player->GetAngle() + i * 5));
 
-	if (timeGetTime() - m_MobSpawn > m_MobDelay - (Player->GetLevel() - 1) * 200)
+	if (!b_isGameover)
 	{
-		if (rand() % 2 == 0)
-			AddObject(new CFirstEnemy(L"./Images/Enemy1.png", D2D1::Point2F(rand() % (WinSizeX - 40), 70), 40, 55));
-		else
-			AddObject(new CSecondEnemy(L"./Images/Enemy2.png", D2D1::Point2F(rand() % (WinSizeX - 36), 70), 36, 44));
-		m_MobSpawn = timeGetTime();
+		if (timeGetTime() - m_MobSpawn > m_MobDelay - (Player->GetLevel() - 1) * 200)
+		{
+			if (rand() % 2 == 0)
+				AddObject(new CFirstEnemy(L"./Images/Enemy1.png", D2D1::Point2F(rand() % (WinSizeX - 40), 70), 40, 55));
+			else
+				AddObject(new CSecondEnemy(L"./Images/Enemy2.png", D2D1::Point2F(rand() % (WinSizeX - 36), 70), 36, 44));
+			m_MobSpawn = timeGetTime();
+		}
 	}
 
 	if (timeGetTime() - m_AsteroidSpawn > m_AsteroidDelay)
@@ -56,11 +60,14 @@ void CIngameScene::Update(DWORD elapsed)
 	{
 		if ((*iter)->m_tag == ENEMY)
 		{
-			if (RectCircleCrashCheck(Player->GetPos(), Player->GetRadius(), (*iter)->GetRect()))
+			if (!b_isGameover)
 			{
-				Player->SetHp(Player->GetHp() - ((CEnemy*)(*iter))->GetDamage());
-				AddObject(new CExplosionEvent(L"./Images/Explosion/explosion1.png", (*iter)->GetPos(), 64, 64, true));
-				(*iter)->m_isLive = false;
+				if (RectCircleCrashCheck(Player->GetPos(), Player->GetRadius(), (*iter)->GetRect()))
+				{
+					Player->SetHp(Player->GetHp() - ((CEnemy*)(*iter))->GetDamage());
+					AddObject(new CExplosionEvent(L"./Images/Explosion/explosion1.png", (*iter)->GetPos(), 64, 64, true));
+					(*iter)->m_isLive = false;
+				}
 			}
 
 			if (((CEnemy*)(*iter))->IsFire())
@@ -95,7 +102,14 @@ void CIngameScene::Update(DWORD elapsed)
 				{
 					Player->SetHp(Player->GetHp() - ((CBullet*)(*iter))->GetDamage());
 					if (Player->GetHp() <= 0)
+					{
 						AddObject(new CExplosionEvent(L"./Images/Explosion/explosion1.png", Player->GetPos(), 64, 64, false));
+						if (!b_isGameover)
+						{
+							b_isGameover = true;
+							AddObject(new CGameoverUI(L"./Images/GameOver.png", D2D1::Point2F(WinSizeX / 2, WinSizeY / 2), 573, 374));
+						}
+					}
 					(*iter)->m_isLive = false;
 				}
 			}

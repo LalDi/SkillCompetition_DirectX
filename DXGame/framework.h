@@ -67,6 +67,7 @@
 #include "CStatusFrameUI.h"
 #include "CHpbarUI.h"
 #include "CExpbarUI.h"
+#include "CGameoverUI.h"
 
 
 // 게임 씬
